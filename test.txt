@@ -1,0 +1,1 @@
+[...document.querySelectorAll('link[rel="stylesheet"]')].map(x => x.href.split('/').pop().split('?')[0]).slice(0,10)
