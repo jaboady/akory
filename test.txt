@@ -1,3 +1,5 @@
 [...document.querySelectorAll('link[rel="stylesheet"]')].map(x => x.href.split('/').pop().split('?')[0]).slice(0,10)
 
 [...document.querySelectorAll('link[rel="stylesheet"]')].map(x => x.href).filter(x => /\/main[^/]*\.css/.test(x))
+
+performance.getEntriesByType('resource').filter(x => /phenix|theme/i.test(x.name)).map(x => x.name.split('/').slice(-3).join('/')).slice(0,10)
